@@ -3,7 +3,7 @@ import axios from "axios"
 export default function ListItem(props) {
 
     function deleteTask() {
-        axios.delete(`http://localhost:5000/task/${props._id}`)
+        axios.delete(`https://mazal-todo-mern-app.herokuapp.com/task/${props._id}`)
             .then(() => {
                 props.refreshView()
             })
@@ -12,7 +12,9 @@ export default function ListItem(props) {
     function updateTask(e) {
         const newDone = e.target.checked
 
-        axios.put(`http://localhost:5000/task/${props._id}`, { done: newDone })
+        axios.put(`https://mazal-todo-mern-app.herokuapp.com/task/${props._id}`, {
+            done: newDone
+        })
             .then(() => {
                 props.refreshView()
             })

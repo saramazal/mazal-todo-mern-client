@@ -9,7 +9,7 @@ export default function ToDo() {
     useEffect(getTasks, [])
 
     function getTasks() {
-        axios.get('http://localhost:5000/task')
+        axios.get('https://mazal-todo-mern-app.herokuapp.com/task')
             .then(result => {
                 setTasksList(result.data)
             })

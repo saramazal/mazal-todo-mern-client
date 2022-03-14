@@ -8,7 +8,7 @@ export default function TaskForm(props) {
             form = e.target,
             values = getAllValues(form)
 
-        axios.post('http://localhost:5000/task', values)
+        axios.post('https://mazal-todo-mern-app.herokuapp.com/task', values)
             .then(() => {
                 props.refreshView()
                 form.reset()
